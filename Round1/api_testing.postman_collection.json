@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "de80eefb-6054-4385-ab31-5326ddfb15fc",
+		"name": "api_testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24993072"
+	},
+	"item": [
+		{
+			"name": "api1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 2,\r\n  \"contacts\": [\r\n    {\r\n      \"name\": \"darshan\",\r\n      \"number\": \"6657991246\"\r\n    },\r\n    {\r\n      \"name\": \"sahil\",\r\n      \"number\": \"2234567777\"\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sync-contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sync-contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/common-users?searchNumber=6657991246",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"common-users"
+					],
+					"query": [
+						{
+							"key": "searchNumber",
+							"value": "6657991246"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/contacts?userId=2&page=1&pageSize=2&searchText=sah",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						},
+						{
+							"key": "searchText",
+							"value": "sah"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
