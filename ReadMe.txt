@@ -14,7 +14,7 @@ I have used
 - MySQL (version 8.0.31)
 
 #Prerequisites before running project - 
-1> import project in local workspace
+1> Using git bash, Clone repository ->  git clone https://github.com/Rushi1116/Lenditt_Exam.git
 2> using vscode terminal navigate to project directory -> cd Round1
 3> installing dependencies using npm, it will create node_modules file -> npm install
 4> after that we will update database configuration file (db.js) as,
